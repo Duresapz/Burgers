@@ -1,0 +1,13 @@
+.main-div{
+    max-width: 400px;
+    margin-left: 2%;
+  }
+
+.app-burger{
+    opacity:1;
+    margin: 2%;
+}
+
+.burger-card {
+    max-width: 400px;
+}

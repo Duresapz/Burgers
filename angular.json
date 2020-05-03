@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "burgersapp"
+    }
+  },
+  "defaultProject": "burgersapp",
+  "cli": {
+    "analytics": "e237d92c-033f-494a-813a-80b2e7c47382"
+  }
 }
