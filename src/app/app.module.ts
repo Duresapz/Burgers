@@ -19,12 +19,25 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
+import { BurgerDetailsComponent } from './burger-details/burger-details.component';
+import { BurgerDetailsViewComponent } from './burger-details-view/burger-details-view.component';
+import { Routes, RouterModule } from '@angular/router';
+import { IndexComponent } from './index/index.component';
+
+const appRoutes: Routes = [
+  { path: 'burgers', component: BurgerViewComponent },
+  { path: 'burgers/:id', component: BurgerDetailsViewComponent },
+  { path: '', component: IndexComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     BurgerComponent,
-    BurgerViewComponent
+    BurgerViewComponent,
+    BurgerDetailsComponent,
+    BurgerDetailsViewComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +53,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatInputModule,
     MatSidenavModule,
     MatMenuModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [BurgersService],
   bootstrap: [AppComponent]
